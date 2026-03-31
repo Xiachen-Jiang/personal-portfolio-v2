@@ -111,16 +111,18 @@ export default function Projects() {
                           className="flex items-center gap-3 border-t pt-4 flex-wrap"
                           style={{ borderColor: 'var(--t-card-border)' }}
                         >
-                          <a
-                            href={project.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-1.5 font-body text-xs transition-colors hover:opacity-70"
-                            style={{ color: 'var(--t-text-3)' }}
-                          >
-                            <Github size={14} />
-                            Source
-                          </a>
+                          {project.github && (
+                            <a
+                              href={project.github}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-1.5 font-body text-xs transition-colors hover:opacity-70"
+                              style={{ color: 'var(--t-text-3)' }}
+                            >
+                              <Github size={14} />
+                              Source
+                            </a>
+                          )}
                           {project.live && (
                             <a
                               href={project.live}
