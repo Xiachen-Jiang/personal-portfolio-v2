@@ -11,13 +11,13 @@ const contactLinks = [
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    sub: 'linkedin.com/in/xiachen-jiang',
+    sub: 'https://www.linkedin.com/in/xiachen-jiang-b84434192/',
     href: PROFILE.links.linkedin,
   },
   {
     icon: Github,
     label: 'GitHub',
-    sub: 'github.com/Xiachen-Jiang',
+    sub: 'https://github.com/Xiachen-Jiang',
     href: PROFILE.links.github,
   },
   {

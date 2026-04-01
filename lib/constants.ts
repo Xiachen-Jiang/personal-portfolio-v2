@@ -11,9 +11,9 @@ export const PROFILE = {
   },
   links: {
     github: 'https://github.com/Xiachen-Jiang',
-    linkedin: 'https://linkedin.com/in/xiachen-jiang/',
+    linkedin: 'https://www.linkedin.com/in/xiachen-jiang-b84434192/',
     website: 'https://www.james-jiang.com',
-    resume: '#',
+    resume: '/Resume_James_Jiang_2026.pdf',
   },
 } as const
 
