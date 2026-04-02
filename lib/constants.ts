@@ -90,6 +90,7 @@ export const WEBSITES = [
   { name: 'Adelaide Footy', url: 'https://adelaidefooty.com.au', domain: 'adelaidefooty.com.au', logo: '/built_website/logo-adelaidefooty.png' },
   { name: 'VS Sassoon', url: 'https://vssassoon.com.au', domain: 'vssassoon.com.au', logo: '/built_website/logo-vssassoon.png' },
   { name: 'Cuisinart AU', url: 'https://cuisinart.com.au', domain: 'cuisinart.com.au', logo: '/built_website/logo-cuisinart.png' },
+  { name: 'Scunci', url: 'https://scunci.com.au', domain: 'scunci.com.au', logo: '/built_website/logo-scunci.png' },
   { name: 'Midsec', url: 'https://midsec.com.au', domain: 'midsec.com.au', logo: '/built_website/logo-midsec.png' },
   { name: 'MASA', url: 'https://masa.com.au', domain: 'masa.com.au', logo: '/built_website/logo-masa.png' },
   { name: 'Vilis', url: 'https://vilis.com', domain: 'vilis.com', logo: '/built_website/logo-vilis.png' },
@@ -97,6 +98,7 @@ export const WEBSITES = [
   { name: 'Whyalla', url: 'https://whyalla.com', domain: 'whyalla.com', logo: '/built_website/logo-whyalla.png' },
   { name: 'Nelson Teamwear', url: 'https://nelsonteamwear.com.au', domain: 'nelsonteamwear.com.au', logo: '/built_website/logo-nelson.png' },
   { name: 'AIML Shop', url: 'https://aiml.shop', domain: 'aiml.shop', logo: '/built_website/logo-aiml.png' },
+  { name: 'MASA APP', url: 'https://melrosepark.masastudios.com.au/', domain: 'melrosepark.masastudios.com.au', logo: '/built_website/logo-masaapp.png' },
 ]
 
 export const NAV_LINKS = [
