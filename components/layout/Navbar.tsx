@@ -68,6 +68,8 @@ export default function Navbar() {
           ))}
           <a
             href={PROFILE.links.resume}
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-4 py-1.5 rounded-full text-sm font-display font-semibold border transition-all duration-200 hover:opacity-80"
             style={{
               borderColor: 'var(--t-accent-1)',
@@ -123,6 +125,8 @@ export default function Navbar() {
               ))}
               <a
                 href={PROFILE.links.resume}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="font-body text-sm transition-colors py-1"
                 style={{ color: 'var(--t-accent-1)' }}
                 onClick={() => setMenuOpen(false)}

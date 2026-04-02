@@ -3,10 +3,11 @@ import { cn } from '@/lib/utils'
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'ghost'
   href?: string
+  target?: string
   children: React.ReactNode
 }
 
-export default function Button({ variant = 'primary', href, children, className, ...props }: ButtonProps) {
+export default function Button({ variant = 'primary', href, target, children, className, ...props }: ButtonProps) {
   const base =
     'inline-flex items-center gap-2 px-6 py-3 rounded-full font-display font-semibold text-sm transition-all duration-200 cursor-pointer hover:scale-105 active:scale-95'
 
@@ -28,7 +29,7 @@ export default function Button({ variant = 'primary', href, children, className,
 
   if (href) {
     return (
-      <a href={href} className={cn(base, variantClass, className)} style={sharedStyle}>
+      <a href={href} target={target} rel={target === '_blank' ? 'noopener noreferrer' : undefined} className={cn(base, variantClass, className)} style={sharedStyle}>
         {children}
       </a>
     )

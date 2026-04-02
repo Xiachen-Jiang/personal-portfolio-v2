@@ -57,7 +57,7 @@ export default function Projects() {
                     className={`h-36 bg-gradient-to-br ${project.gradient} relative overflow-hidden flex items-center justify-center`}
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent" />
-                    <span className="font-display text-4xl font-bold text-white/10 select-none">
+                    <span className="font-display text-4xl font-bold select-none" style={{ color: 'var(--t-watermark)' }}>
                       {project.title.split(' ').map((w) => w[0]).join('')}
                     </span>
                     <div className="absolute top-3 right-3 w-2 h-2 rounded-full bg-white/30" />

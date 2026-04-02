@@ -89,7 +89,7 @@ export default function Hero() {
           className="flex flex-wrap gap-4 justify-center mb-10"
         >
           <Button href="#projects">View Projects</Button>
-          <Button variant="ghost" href={PROFILE.links.resume}>
+          <Button variant="ghost" href={PROFILE.links.resume} target="_blank">
             Download Resume
           </Button>
         </motion.div>

@@ -21,6 +21,7 @@ const TECH_VARS = `
   --t-eyebrow-border:   rgba(124, 58, 237, 0.30);
   --t-timeline-line:    rgba(124, 58, 237, 0.30);
   --t-grid-line:        rgba(255, 255, 255, 0.10);
+  --t-watermark:        rgba(255, 255, 255, 0.10);
 `
 
 /* ── HR Manager — clean light ─────────────────────────────────────────────── */
@@ -32,8 +33,8 @@ const HR_VARS = `
   --t-card-shadow:      4px 4px 10px rgba(0, 0, 0, 0.08), -2px -2px 6px rgba(255, 255, 255, 0.80);
   --t-card-shadow-hover:6px 6px 16px rgba(0, 0, 0, 0.12), -3px -3px 10px rgba(255, 255, 255, 0.90);
   --t-text-1:           #0f172a;
-  --t-text-2:           #475569;
-  --t-text-3:           #94a3b8;
+  --t-text-2:           #1e293b;
+  --t-text-3:           #475569;
   --t-accent-1:         #2563eb;
   --t-accent-2:         #0ea5e9;
   --t-orb-1:            rgba(37, 99, 235, 0.06);
@@ -42,6 +43,7 @@ const HR_VARS = `
   --t-eyebrow-border:   rgba(37, 99, 235, 0.20);
   --t-timeline-line:    rgba(37, 99, 235, 0.20);
   --t-grid-line:        rgba(0, 0, 0, 0.05);
+  --t-watermark:        rgba(0, 0, 0, 0.08);
 `
 
 /**
