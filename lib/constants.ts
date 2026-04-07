@@ -60,7 +60,8 @@ export const PROJECTS = [
     tech: ['React', 'JavaScript', '.NET Core', 'SQL Server', 'Firebase', 'Material UI'],
     github: null,
     live: null,
-    video: '/project/MASA-studio-project.mov',
+    thumbnail: '/project/masa-studio/masa-studio.png',
+    video: '/project/masa-studio/MASA-studio-project.mov',
     gradient: 'from-violet-500/20 to-purple-600/20',
   },
   {
@@ -71,7 +72,8 @@ export const PROJECTS = [
     tech: ['React', 'TypeScript', 'Node.js', '.NET Core', 'SQL Server'],
     github: null,
     live: null,
-    video: '/project/trip-planner.mov',
+    thumbnail: '/project/trip-planner/trip-planner.png',
+    video: '/project/trip-planner/trip-planner.mov',
     gradient: 'from-purple-500/20 to-cyan-600/20',
   },
   {
@@ -81,7 +83,8 @@ export const PROJECTS = [
     tech: ['LangChain', 'Typescript', 'Gemini API', 'Node.js', 'LLM', 'React', 'Next.js'],
     github: 'https://github.com/Xiachen-Jiang/LangChain_AI_Agent',
     live: null,
-    video: '/project/LangChain_AI_Agent_Presentation.mov',
+    thumbnail: '/project/AI_agent/AI_agent_tools.png',
+    video: '/project/AI_agent/LangChain_AI_Agent_Presentation.mov',
     gradient: 'from-indigo-500/20 to-purple-600/20',
   },
 ]

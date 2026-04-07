@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Github, ExternalLink, Play } from 'lucide-react'
 import { PROJECTS } from '@/lib/constants'
@@ -52,16 +53,23 @@ export default function Projects() {
             {PROJECTS.map((project) => (
               <motion.div key={project.id} variants={fadeInUp} className="h-full">
                 <GlassCard className="p-0 overflow-hidden h-full flex flex-col">
-                  {/* Gradient banner */}
-                  <div
-                    className={`h-36 bg-gradient-to-br ${project.gradient} relative overflow-hidden flex items-center justify-center`}
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent" />
-                    <span className="font-display text-4xl font-bold select-none" style={{ color: 'var(--t-watermark)' }}>
-                      {project.title.split(' ').map((w) => w[0]).join('')}
-                    </span>
-                    <div className="absolute top-3 right-3 w-2 h-2 rounded-full bg-white/30" />
-                    <div className="absolute top-3 right-7 w-2 h-2 rounded-full bg-white/20" />
+                  {/* Thumbnail banner */}
+                  <div className="relative h-44 overflow-hidden">
+                    {'thumbnail' in project && project.thumbnail ? (
+                      <Image
+                        src={project.thumbnail as string}
+                        alt={project.title}
+                        fill
+                        className="object-cover"
+                        unoptimized
+                      />
+                    ) : (
+                      <div className={`h-full bg-gradient-to-br ${project.gradient} flex items-center justify-center`}>
+                        <span className="font-display text-4xl font-bold select-none" style={{ color: 'var(--t-watermark)' }}>
+                          {project.title.split(' ').map((w) => w[0]).join('')}
+                        </span>
+                      </div>
+                    )}
 
                     {/* Play overlay */}
                     {'video' in project && project.video && (
