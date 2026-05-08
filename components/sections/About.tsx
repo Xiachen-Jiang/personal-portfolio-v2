@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Code2, Users, Zap, Globe } from 'lucide-react'
 import { PROFILE } from '@/lib/constants'
@@ -73,14 +74,15 @@ export default function About() {
             {/* Avatar */}
             <GlassCard className="p-8 flex items-center justify-center" hover={false}>
               <div className="relative">
-                <div
-                  className="w-32 h-32 rounded-full flex items-center justify-center text-4xl font-display font-bold text-white shadow-2xl"
-                  style={{
-                    backgroundImage: 'linear-gradient(135deg, var(--t-accent-1), var(--t-accent-2))',
-                    boxShadow: '0 20px 40px var(--t-card-shadow)',
-                  }}
-                >
-                  JJ
+                <div className="w-32 h-32 rounded-full overflow-hidden shadow-2xl">
+                  <Image
+                    src="/james-hero.jpg"
+                    alt="James Jiang"
+                    width={128}
+                    height={128}
+                    className="w-full h-full object-cover"
+                    unoptimized
+                  />
                 </div>
                 <div
                   className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-400 rounded-full border-2 flex items-center justify-center"

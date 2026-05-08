@@ -104,19 +104,19 @@ export default function ClientWork() {
                       <p className="font-display text-sm font-semibold leading-tight mb-1" style={{ color: 'var(--t-text-1)' }}>
                         {site.name}
                       </p>
-                      <p className="font-mono text-[10px] truncate w-full" style={{ color: 'var(--t-text-3)' }}>
+                      {/* <p className="font-mono text-[10px] truncate w-full" style={{ color: 'var(--t-text-3)' }}>
                         {site.domain}
-                      </p>
+                      </p> */}
                     </div>
 
                     {/* Hover indicator */}
-                    <div
+                    {/* <div
                       className="flex items-center gap-1 transition-colors duration-200 group-hover:opacity-100 opacity-40"
                       style={{ color: 'var(--t-accent-1)' }}
                     >
                       <ExternalLink size={12} />
                       <span className="font-body text-[10px]">View Live</span>
-                    </div>
+                    </div> */}
                   </GlassCard>
                 </a>
               </motion.div>
