@@ -20,7 +20,7 @@ export const PROFILE = {
 export const EXPERIENCE = [
   {
     id: 1,
-    role: 'Software Developer',
+    role: 'Web/Software Developer',
     company: 'JABA Web Design',
     location: 'Adelaide, Australia',
     period: 'Sep 2024 – Present',

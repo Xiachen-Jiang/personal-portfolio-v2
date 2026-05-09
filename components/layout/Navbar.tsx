@@ -41,16 +41,16 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="font-display font-bold text-lg">
-          <span
+          {/* <span
             className="bg-clip-text text-transparent"
             style={{
               backgroundImage: 'linear-gradient(to right, var(--t-accent-1), var(--t-accent-2))',
             }}
           >
             JJ
-          </span>
+          </span> */}
           <span className="ml-2 hidden sm:inline" style={{ color: 'var(--t-text-2)' }}>
-            James Jiang
+            {'<Jiang />'}
           </span>
         </a>
 
