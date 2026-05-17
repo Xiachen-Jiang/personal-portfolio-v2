@@ -165,7 +165,7 @@ export default function Projects() {
           </motion.div>
 
           {/* GitHub CTA */}
-          <motion.div
+          {/* <motion.div
             variants={fadeInUp}
             initial="hidden"
             whileInView="show"
@@ -182,7 +182,7 @@ export default function Projects() {
               <Github size={16} />
               View all projects on GitHub
             </a>
-          </motion.div>
+          </motion.div> */}
         </div>
       </section>
 

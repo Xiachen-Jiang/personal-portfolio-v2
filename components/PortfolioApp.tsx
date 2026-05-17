@@ -10,6 +10,7 @@ import Experience from '@/components/sections/Experience'
 import ClientWork from '@/components/sections/ClientWork'
 import Projects from '@/components/sections/Projects'
 import Contact from '@/components/sections/Contact'
+import VisitorCounter from '@/components/ui/VisitorCounter'
 
 export default function PortfolioApp() {
   return (
@@ -28,6 +29,8 @@ export default function PortfolioApp() {
         <Contact />
         <Footer />
       </main>
+
+      <VisitorCounter />
     </>
   )
 }
