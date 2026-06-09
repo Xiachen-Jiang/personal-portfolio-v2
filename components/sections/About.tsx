@@ -10,7 +10,7 @@ import { fadeInUp, slideInLeft, slideInRight, staggerContainer, viewportOnce } f
 
 const stats = [
   { icon: Code2, label: 'Years Experience', value: '2+' },
-  { icon: Zap, label: 'Projects Shipped', value: '10+' },
+  { icon: Zap, label: 'Projects Shipped', value: '50+' },
   { icon: Users, label: 'Team Environments', value: 'Agile' },
   { icon: Globe, label: 'Deployment Platforms', value: 'Azure / AWS' },
 ]
@@ -47,7 +47,7 @@ export default function About() {
           {/* Left: Text */}
           <motion.div variants={slideInLeft} initial="hidden" whileInView="show" viewport={viewportOnce}>
             <h3 className="font-display text-2xl font-bold mb-4" style={{ color: 'var(--t-text-1)' }}>
-              Building great software, one line at a time.
+              Building great software.
             </h3>
             <p className="font-body leading-relaxed mb-4" style={{ color: 'var(--t-text-2)' }}>
               {PROFILE.bio}
