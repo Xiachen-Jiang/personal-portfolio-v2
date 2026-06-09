@@ -10,7 +10,7 @@ import { fadeInUp, slideInLeft, slideInRight, staggerContainer, viewportOnce } f
 
 const stats = [
   { icon: Code2, label: 'Years Experience', value: '2+' },
-  { icon: Zap, label: 'Projects Shipped', value: '50+' },
+  { icon: Zap, label: 'Projects Shipped', value: '30+' },
   { icon: Users, label: 'Team Environments', value: 'Agile' },
   { icon: Globe, label: 'Deployment Platforms', value: 'Azure / AWS' },
 ]
