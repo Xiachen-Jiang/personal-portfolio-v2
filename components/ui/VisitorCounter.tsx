@@ -4,11 +4,11 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { AnimatePresence, motion } from 'framer-motion'
 
-function ordinal(n: number) {
-  const s = ['th', 'st', 'nd', 'rd']
-  const v = n % 100
-  return n + (s[(v - 20) % 10] || s[v] || s[0])
-}
+// function ordinal(n: number) {
+//   const s = ['th', 'st', 'nd', 'rd']
+//   const v = n % 100
+//   return n + (s[(v - 20) % 10] || s[v] || s[0])
+// }
 
 function ChibiAvatar({ size }: { size: number }) {
   return (
@@ -17,7 +17,7 @@ function ChibiAvatar({ size }: { size: number }) {
       alt="James chibi avatar"
       width={size}
       height={size}
-      className="w-full h-full object-contain"
+      className="w-full h-full object-cover"
       unoptimized
     />
   )
@@ -76,18 +76,18 @@ export default function VisitorCounter() {
             }}
           >
             <p className="font-display text-sm font-semibold mb-1" style={{ color: 'var(--t-text-1)' }}>
-              Hello, there.
+              Hello, viewer No.{count}.
             </p>
             <p className="font-body text-xs leading-relaxed" style={{ color: 'var(--t-text-2)' }}>
-              You are the {ordinal(count)} viewer.
+              Hope you have a good day!
             </p>
-            <div
+            {/* <div
               className="absolute -bottom-2 right-5 w-3 h-3 rotate-45 border-r border-b"
               style={{
                 backgroundColor: 'var(--t-card-bg)',
                 borderColor: 'var(--t-card-border)',
               }}
-            />
+            /> */}
           </motion.div>
         )}
       </AnimatePresence>
