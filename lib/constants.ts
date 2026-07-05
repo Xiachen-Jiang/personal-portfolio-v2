@@ -13,7 +13,7 @@ export const PROFILE = {
     github: 'https://github.com/Xiachen-Jiang',
     linkedin: 'https://www.linkedin.com/in/xiachen-jiang-b84434192/',
     website: 'https://www.james-jiang.com',
-    resume: '/Resume_James_Jiang_2026.pdf',
+    resume: '/Resume-Xiachen-Jiang-26.pdf',
   },
 } as const
 
@@ -33,7 +33,7 @@ export const EXPERIENCE = [
       'Applied SEO and performance optimisation techniques, increasing page load speed and user engagement.',
       'Developed unit and integration tests using Jest and NUnit, improving code reliability.',
       'Collaborated with clients and stakeholders to deliver features on time within Agile workflows.',
-      'Prototyped AI-driven automation solutions (AI agents) to streamline onboarding and document processing.',
+      'Designed and prototyped AI-powered workflow automation using LLMs and AI agents to streamline onboarding, document processing and internal operations.',
     ],
   },
   {
@@ -56,7 +56,7 @@ export const PROJECTS = [
     id: 1,
     title: 'MASA Studio Management App',
     description:
-      "A full-stack management application to manage the studio's daily operations, including class scheduling, student management, and studio configuration.",
+      "A production management platform used by a dance studio with over 600 students to streamline scheduling, student enrolments, payments and day-to-day operations.",
     tech: ['React', 'JavaScript', '.NET Core', 'SQL Server', 'Firebase', 'Material UI'],
     github: null,
     live: null,
@@ -68,7 +68,7 @@ export const PROJECTS = [
     id: 2,
     title: 'Trip Planner Application',
     description:
-      'A comprehensive trip planning application using ATDW data and Google Maps API to provide users with a seamless and intuitive trip planning experience.',
+      'A tourism planning platform integrating ATDW data and Google Maps to help travellers discover attractions and build personalised itineraries.',
     tech: ['React', 'TypeScript', 'Node.js', '.NET Core', 'SQL Server'],
     github: null,
     live: null,
@@ -79,7 +79,7 @@ export const PROJECTS = [
   {
     id: 3,
     title: 'AI Agent Tools',
-    description: 'This system implements a ReAct-style AI agent using LangChain. The agent reasons about user intent, decides whether to call tools, and orchestrates multiple tools before producing a final answer.',
+    description: 'An AI-powered assistant capable of reasoning through user requests, selecting the right tools and orchestrating multiple actions using LangChain and LLMs.',
     tech: ['LangChain', 'Typescript', 'Gemini API', 'Node.js', 'LLM', 'React', 'Next.js'],
     github: 'https://github.com/Xiachen-Jiang/LangChain_AI_Agent',
     live: null,

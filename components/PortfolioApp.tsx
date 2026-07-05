@@ -19,7 +19,7 @@ export default function PortfolioApp() {
         <Hero />
         <About />
         <Skills />
-        <Experience />
+        {/* <Experience /> */}
         <ClientWork />
         <Projects />
         <Contact />

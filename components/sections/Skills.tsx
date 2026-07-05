@@ -68,7 +68,7 @@ export default function Skills() {
         </motion.div>
 
         {/* Marquee */}
-        <motion.div
+        {/* <motion.div
           variants={fadeInUp}
           initial="hidden"
           whileInView="show"
@@ -98,7 +98,7 @@ export default function Skills() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   )

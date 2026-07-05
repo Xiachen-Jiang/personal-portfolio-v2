@@ -29,17 +29,17 @@ export default function About() {
             <h3 className="font-display text-2xl font-extrabold mb-4" style={{ color: 'var(--nb-ink)' }}>
               Building great software.
             </h3>
-            <p className="font-body leading-relaxed mb-4" style={{ color: 'var(--nb-muted)' }}>
-              {PROFILE.bio}
+            <p className="font-body leading-relaxed mb-2" style={{ color: 'var(--nb-muted)' }}>
+              I&apos;m a Full Stack Developer who enjoys turning complex business requirements into clean, scalable software.
             </p>
-            <p className="font-body leading-relaxed mb-6" style={{ color: 'var(--nb-muted)' }}>
-              I specialize in the full stack — from crafting intuitive React interfaces with TypeScript to engineering
-              robust back-end APIs with C# ASP.NET Core and designing efficient SQL databases. I thrive in Agile
-              environments and enjoy solving real-world problems with clean, maintainable code.
+            <p className="font-body leading-relaxed mb-2" style={{ color: 'var(--nb-muted)' }}>
+              Over the past two years, I&apos;ve delivered production applications across education, e-commerce, government and business services—working on everything from modern React frontends to ASP.NET Core APIs, SQL databases and cloud deployments.
             </p>
-            <p className="font-body leading-relaxed" style={{ color: 'var(--nb-muted)' }}>
-              When I&apos;m not coding, I&apos;m exploring new technologies, contributing to open-source, and
-              staying up to date with the latest in web development.
+            <p className="font-body leading-relaxed mb-2" style={{ color: 'var(--nb-muted)' }}>
+              I enjoy solving problems, improving existing systems and learning new technologies quickly. Whether I&apos;m building a new feature, optimising performance or experimenting with AI-powered automation, my goal is always the same: create software that makes life easier for users.
+            </p>
+            <p className="font-body leading-relaxed mb-2" style={{ color: 'var(--nb-muted)' }}>
+              Outside work, I enjoy exploring AI technologies, contributing to personal projects and continuously improving my development skills.
             </p>
           </motion.div>
 
@@ -59,7 +59,7 @@ export default function About() {
                   style={{ borderColor: 'var(--nb-ink)' }}
                 >
                   <Image
-                    src="/james-hero.jpg"
+                    src="/james-hero-2.png"
                     alt="James Jiang"
                     width={128}
                     height={128}

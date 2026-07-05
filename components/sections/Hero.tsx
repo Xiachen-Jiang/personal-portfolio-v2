@@ -55,7 +55,7 @@ export default function Hero() {
               boxShadow: `4px 4px 0 0 ${INK}`,
             }}
           >
-            Software Engineer + Full Stack Developer
+            Full Stack Developer
           </span>
         </motion.div>
 
@@ -88,19 +88,17 @@ export default function Hero() {
           className="font-body text-lg md:text-xl max-w-2xl mb-10 leading-relaxed font-medium"
           style={{ color: INK }}
         >
-          Building scalable, user-centric applications with{' '}
+          Building software that people actually enjoy using.
+          <br />
+          Full Stack Developer specialising in{' '}
           <span className="font-bold" style={{ backgroundColor: YELLOW, padding: '0 4px' }}>
             React
           </span>
           ,{' '}
           <span className="font-bold" style={{ backgroundColor: YELLOW, padding: '0 4px' }}>
-            TypeScript
-          </span>
-          , and{' '}
-          <span className="font-bold" style={{ backgroundColor: YELLOW, padding: '0 4px' }}>
             ASP.NET Core
           </span>
-          .
+          and modern cloud technologies.
         </motion.p>
 
         {/* CTA buttons */}

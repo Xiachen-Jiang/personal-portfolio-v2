@@ -30,8 +30,7 @@ export default function ClientWork() {
           className="font-body text-center max-w-2xl mx-auto mb-16"
           style={{ color: 'var(--nb-muted)' }}
         >
-          A selection of live websites I developed and maintained — spanning
-          sports, e-commerce, professional services, and local government sectors.
+          Real-world client websites currently serving businesses, councils and organisations across Australia.
         </motion.p>
 
         {/* Website grid */}
