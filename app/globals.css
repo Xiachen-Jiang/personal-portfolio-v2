@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --animate-gradient-x: gradientX 6s ease infinite;
-  --animate-float: float 4s ease-in-out infinite;
+  --animate-marquee: marquee 30s linear infinite;
 }
 
 @theme inline {
@@ -11,21 +10,23 @@
   --font-mono: var(--font-jetbrains-mono);
 }
 
-/*
- * NOTE: [data-persona] blocks with CSS custom property definitions were removed
- * because Tailwind v4 / Turbopack strips them at compile time and statically
- * resolves var() fallbacks. Theme tokens are now injected at runtime by
- * components/ThemeVars.tsx via a React <style> tag that Tailwind never touches.
- */
-
-@keyframes gradientX {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+/* ── Neo-Brutalism design tokens ─────────────────────────────── */
+:root {
+  --nb-bg: #f5f1e8;
+  --nb-paper: #ffffff;
+  --nb-ink: #111111;
+  --nb-muted: #55504a;
+  --nb-blue: #4d5bf9;
+  --nb-yellow: #ffd43b;
+  --nb-pink: #ff6fb5;
+  --nb-orange: #fb923c;
+  --nb-green: #34d399;
+  --nb-red: #ff5c4d;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 * {
@@ -36,23 +37,22 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Static baseline — ThemeVars.tsx overrides these at runtime */
 body {
-  background-color: #0a0a0f;
-  color: #f1f5f9;
+  background-color: var(--nb-bg);
+  color: var(--nb-ink);
   font-family: var(--font-inter), system-ui, sans-serif;
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a0a0f;
+  background: var(--nb-bg);
+  border-left: 2px solid var(--nb-ink);
 }
 ::-webkit-scrollbar-thumb {
-  background: #7c3aed;
-  border-radius: 3px;
+  background: var(--nb-ink);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #a855f7;
+  background: var(--nb-blue);
 }

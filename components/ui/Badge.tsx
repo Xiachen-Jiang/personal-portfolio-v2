@@ -9,13 +9,15 @@ export default function Badge({ children, className }: BadgeProps) {
   return (
     <span
       className={cn(
-        'font-mono text-xs px-3 py-1 rounded-full border transition-colors duration-200',
+        'font-mono text-xs font-semibold px-2.5 py-1 border-[2px] transition-transform duration-150',
         className,
       )}
       style={{
-        backgroundColor: 'var(--t-card-bg)',
-        borderColor: 'var(--t-card-border)',
-        color: 'var(--t-text-2)',
+        backgroundColor: 'var(--nb-paper)',
+        borderColor: 'var(--nb-ink)',
+        color: 'var(--nb-ink)',
+        borderRadius: '0.5rem',
+        boxShadow: '2px 2px 0 0 var(--nb-ink)',
       }}
     >
       {children}

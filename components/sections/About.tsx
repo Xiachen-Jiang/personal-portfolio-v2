@@ -5,8 +5,10 @@ import { motion } from 'framer-motion'
 import { Code2, Users, Zap, Globe } from 'lucide-react'
 import { PROFILE } from '@/lib/constants'
 import GlassCard from '@/components/ui/GlassCard'
-import GradientText from '@/components/ui/GradientText'
+import SectionHeader from '@/components/ui/SectionHeader'
 import { fadeInUp, slideInLeft, slideInRight, staggerContainer, viewportOnce } from '@/lib/animations'
+
+const ACCENT = 'var(--nb-blue)'
 
 const stats = [
   { icon: Code2, label: 'Years Experience', value: '2+' },
@@ -18,46 +20,24 @@ const stats = [
 export default function About() {
   return (
     <section id="about" className="relative py-24">
-      {/* Background orb */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div
-          className="absolute top-1/2 right-0 w-[400px] h-[400px] rounded-full blur-[130px]"
-          style={{ backgroundColor: 'var(--t-orb-1)' }}
-        />
-      </div>
-
       <div className="max-w-6xl mx-auto px-6">
-        {/* Section title */}
-        <motion.div
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="show"
-          viewport={viewportOnce}
-          className="text-center mb-16"
-        >
-          <p className="font-body text-sm uppercase tracking-widest mb-3" style={{ color: 'var(--t-text-3)' }}>
-            Get to know me
-          </p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold">
-            <GradientText>About Me</GradientText>
-          </h2>
-        </motion.div>
+        <SectionHeader eyebrow="Get to know me" title="About Me" accent={ACCENT} />
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left: Text */}
           <motion.div variants={slideInLeft} initial="hidden" whileInView="show" viewport={viewportOnce}>
-            <h3 className="font-display text-2xl font-bold mb-4" style={{ color: 'var(--t-text-1)' }}>
+            <h3 className="font-display text-2xl font-extrabold mb-4" style={{ color: 'var(--nb-ink)' }}>
               Building great software.
             </h3>
-            <p className="font-body leading-relaxed mb-4" style={{ color: 'var(--t-text-2)' }}>
+            <p className="font-body leading-relaxed mb-4" style={{ color: 'var(--nb-muted)' }}>
               {PROFILE.bio}
             </p>
-            <p className="font-body leading-relaxed mb-6" style={{ color: 'var(--t-text-2)' }}>
+            <p className="font-body leading-relaxed mb-6" style={{ color: 'var(--nb-muted)' }}>
               I specialize in the full stack — from crafting intuitive React interfaces with TypeScript to engineering
               robust back-end APIs with C# ASP.NET Core and designing efficient SQL databases. I thrive in Agile
               environments and enjoy solving real-world problems with clean, maintainable code.
             </p>
-            <p className="font-body leading-relaxed" style={{ color: 'var(--t-text-2)' }}>
+            <p className="font-body leading-relaxed" style={{ color: 'var(--nb-muted)' }}>
               When I&apos;m not coding, I&apos;m exploring new technologies, contributing to open-source, and
               staying up to date with the latest in web development.
             </p>
@@ -72,9 +52,12 @@ export default function About() {
             className="flex flex-col gap-6"
           >
             {/* Avatar */}
-            <GlassCard className="p-8 flex items-center justify-center" hover={false}>
+            <GlassCard className="p-8 flex items-center justify-center" hover={false} accent={ACCENT}>
               <div className="relative">
-                <div className="w-32 h-32 rounded-full overflow-hidden shadow-2xl">
+                <div
+                  className="w-32 h-32 rounded-full overflow-hidden border-[3px]"
+                  style={{ borderColor: 'var(--nb-ink)' }}
+                >
                   <Image
                     src="/james-hero.jpg"
                     alt="James Jiang"
@@ -85,10 +68,10 @@ export default function About() {
                   />
                 </div>
                 <div
-                  className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-400 rounded-full border-2 flex items-center justify-center"
-                  style={{ borderColor: 'var(--t-bg)' }}
+                  className="absolute -bottom-2 -right-2 w-8 h-8 border-[3px] flex items-center justify-center"
+                  style={{ backgroundColor: 'var(--nb-green)', borderColor: 'var(--nb-ink)', borderRadius: '0.5rem' }}
                 >
-                  <span className="text-xs">✓</span>
+                  <span className="text-xs font-bold" style={{ color: 'var(--nb-ink)' }}>✓</span>
                 </div>
               </div>
             </GlassCard>
@@ -103,16 +86,12 @@ export default function About() {
             >
               {stats.map((stat) => (
                 <motion.div key={stat.label} variants={fadeInUp}>
-                  <GlassCard className="p-4 text-center">
-                    <stat.icon
-                      className="mx-auto mb-2"
-                      size={20}
-                      style={{ color: 'var(--t-accent-1)' }}
-                    />
-                    <p className="font-display text-2xl font-bold" style={{ color: 'var(--t-text-1)' }}>
+                  <GlassCard className="p-4 text-center h-full" hover={false}>
+                    <stat.icon className="mx-auto mb-2" size={22} style={{ color: 'var(--nb-ink)' }} />
+                    <p className="font-display text-2xl font-extrabold" style={{ color: 'var(--nb-ink)' }}>
                       {stat.value}
                     </p>
-                    <p className="font-body text-xs mt-1" style={{ color: 'var(--t-text-3)' }}>
+                    <p className="font-body text-xs mt-1 font-semibold" style={{ color: 'var(--nb-muted)' }}>
                       {stat.label}
                     </p>
                   </GlassCard>

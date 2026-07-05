@@ -36,7 +36,7 @@ export default function VideoModal({ src, title, onClose }: VideoModalProps) {
         onClick={onClose}
       >
         {/* Backdrop */}
-        <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-black/70" />
 
         {/* Modal */}
         <motion.div
@@ -44,15 +44,33 @@ export default function VideoModal({ src, title, onClose }: VideoModalProps) {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ duration: 0.25, ease: 'easeOut' }}
-          className="relative z-10 w-full max-w-4xl bg-[#12121a] border border-white/10 rounded-2xl overflow-hidden shadow-2xl shadow-black/60"
+          className="relative z-10 w-full max-w-4xl overflow-hidden border-[3px]"
+          style={{
+            backgroundColor: 'var(--nb-paper)',
+            borderColor: 'var(--nb-ink)',
+            borderRadius: '1rem',
+            boxShadow: '8px 8px 0 0 var(--nb-ink)',
+          }}
           onClick={(e) => e.stopPropagation()}
         >
           {/* Header */}
-          <div className="flex items-center justify-between px-5 py-4 border-b border-white/5">
-            <h3 className="font-display font-semibold text-slate-200 text-sm truncate pr-4">{title}</h3>
+          <div
+            className="flex items-center justify-between px-5 py-4 border-b-[3px]"
+            style={{ borderColor: 'var(--nb-ink)', backgroundColor: 'var(--nb-yellow)' }}
+          >
+            <h3 className="font-display font-extrabold text-sm truncate pr-4" style={{ color: 'var(--nb-ink)' }}>{title}</h3>
             <button
               onClick={onClose}
-              className="shrink-0 p-1.5 rounded-lg text-slate-500 hover:text-slate-200 hover:bg-white/5 transition-all duration-200"
+              className="shrink-0 p-1.5 border-[3px] transition-all duration-150 hover:translate-x-[2px] hover:translate-y-[2px]"
+              style={{
+                color: 'var(--nb-ink)',
+                borderColor: 'var(--nb-ink)',
+                backgroundColor: 'var(--nb-paper)',
+                borderRadius: '0.5rem',
+                boxShadow: '2px 2px 0 0 var(--nb-ink)',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.boxShadow = 'none')}
+              onMouseLeave={(e) => (e.currentTarget.style.boxShadow = '2px 2px 0 0 var(--nb-ink)')}
               aria-label="Close video"
             >
               <X size={18} />

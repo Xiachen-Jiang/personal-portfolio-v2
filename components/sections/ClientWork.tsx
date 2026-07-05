@@ -3,12 +3,13 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ExternalLink, ChevronDown } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import { WEBSITES } from '@/lib/constants'
 import GlassCard from '@/components/ui/GlassCard'
-import GradientText from '@/components/ui/GradientText'
+import SectionHeader from '@/components/ui/SectionHeader'
 import { fadeInUp, staggerContainer, viewportOnce } from '@/lib/animations'
 
+const ACCENT = 'var(--nb-orange)'
 const PAGE_SIZE = 10
 
 export default function ClientWork() {
@@ -18,30 +19,8 @@ export default function ClientWork() {
 
   return (
     <section id="work" className="relative py-24">
-      {/* Background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div
-          className="absolute top-1/2 left-1/4 w-[500px] h-[300px] rounded-full blur-[130px]"
-          style={{ backgroundColor: 'var(--t-orb-2)' }}
-        />
-      </div>
-
       <div className="max-w-6xl mx-auto px-6">
-        {/* Section title */}
-        <motion.div
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="show"
-          viewport={viewportOnce}
-          className="text-center mb-6"
-        >
-          {/* <p className="font-body text-sm uppercase tracking-widest mb-3" style={{ color: 'var(--t-text-3)' }}>
-            JABA Web Design
-          </p> */}
-          <h2 className="font-display text-3xl md:text-4xl font-bold">
-            <GradientText>Built Websites</GradientText>
-          </h2>
-        </motion.div>
+        <SectionHeader eyebrow="Built Websites" title="My Work" accent={ACCENT} className="text-center mb-6" />
 
         <motion.p
           variants={fadeInUp}
@@ -49,9 +28,9 @@ export default function ClientWork() {
           whileInView="show"
           viewport={viewportOnce}
           className="font-body text-center max-w-2xl mx-auto mb-16"
-          style={{ color: 'var(--t-text-2)' }}
+          style={{ color: 'var(--nb-muted)' }}
         >
-          A selection of live websites I developed and maintained during my role at JABA Web Design — spanning
+          A selection of live websites I developed and maintained — spanning
           sports, e-commerce, professional services, and local government sectors.
         </motion.p>
 
@@ -83,10 +62,11 @@ export default function ClientWork() {
                   <GlassCard className="p-4 h-full flex flex-col items-center text-center gap-3">
                     {/* Logo */}
                     <div
-                      className="w-16 h-16 rounded-xl border flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform duration-300 p-2"
+                      className="w-16 h-16 border-[3px] flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform duration-200 p-2"
                       style={{
-                        backgroundColor: 'var(--t-card-bg)',
-                        borderColor: 'var(--t-card-border)',
+                        backgroundColor: 'var(--nb-paper)',
+                        borderColor: 'var(--nb-ink)',
+                        borderRadius: '0.75rem',
                       }}
                     >
                       <Image
@@ -101,22 +81,10 @@ export default function ClientWork() {
 
                     {/* Site name */}
                     <div className="flex-1">
-                      <p className="font-display text-sm font-semibold leading-tight mb-1" style={{ color: 'var(--t-text-1)' }}>
+                      <p className="font-display text-sm font-bold leading-tight mb-1" style={{ color: 'var(--nb-ink)' }}>
                         {site.name}
                       </p>
-                      {/* <p className="font-mono text-[10px] truncate w-full" style={{ color: 'var(--t-text-3)' }}>
-                        {site.domain}
-                      </p> */}
                     </div>
-
-                    {/* Hover indicator */}
-                    {/* <div
-                      className="flex items-center gap-1 transition-colors duration-200 group-hover:opacity-100 opacity-40"
-                      style={{ color: 'var(--t-accent-1)' }}
-                    >
-                      <ExternalLink size={12} />
-                      <span className="font-body text-[10px]">View Live</span>
-                    </div> */}
                   </GlassCard>
                 </a>
               </motion.div>
@@ -135,20 +103,34 @@ export default function ClientWork() {
           {hasMore ? (
             <button
               onClick={() => setVisibleCount((prev) => Math.min(prev + PAGE_SIZE, WEBSITES.length))}
-              className="inline-flex items-center gap-2 font-body text-sm border px-5 py-2 rounded-full transition-colors hover:opacity-70 cursor-pointer"
-              style={{ color: 'var(--t-text-3)', borderColor: 'var(--t-card-border)' }}
+              className="inline-flex items-center gap-2 font-body text-sm font-bold border-[3px] px-5 py-2 cursor-pointer transition-all duration-150 hover:translate-x-[2px] hover:translate-y-[2px]"
+              style={{
+                color: 'var(--nb-ink)',
+                borderColor: 'var(--nb-ink)',
+                backgroundColor: 'var(--nb-paper)',
+                borderRadius: '1.5rem',
+                boxShadow: '4px 4px 0 0 var(--nb-ink)',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.boxShadow = 'none')}
+              onMouseLeave={(e) => (e.currentTarget.style.boxShadow = '4px 4px 0 0 var(--nb-ink)')}
             >
-              <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--t-accent-1)' }} />
-              {WEBSITES.length} websites delivered in production
-              <span style={{ color: 'var(--t-accent-1)' }}>· Show more</span>
-              <ChevronDown size={14} style={{ color: 'var(--t-accent-1)' }} />
+              <span className="w-2.5 h-2.5 border-[2px]" style={{ backgroundColor: ACCENT, borderColor: 'var(--nb-ink)' }} />
+              {WEBSITES.length} websites delivered
+              <span>· Show more</span>
+              <ChevronDown size={14} />
             </button>
           ) : (
             <span
-              className="inline-flex items-center gap-2 font-body text-sm border px-5 py-2 rounded-full"
-              style={{ color: 'var(--t-text-3)', borderColor: 'var(--t-card-border)' }}
+              className="inline-flex items-center gap-2 font-body text-sm font-bold border-[3px] px-5 py-2"
+              style={{
+                color: 'var(--nb-ink)',
+                borderColor: 'var(--nb-ink)',
+                backgroundColor: 'var(--nb-paper)',
+                borderRadius: '1.5rem',
+                boxShadow: '4px 4px 0 0 var(--nb-ink)',
+              }}
             >
-              <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--t-accent-1)' }} />
+              <span className="w-2.5 h-2.5 border-[2px]" style={{ backgroundColor: ACCENT, borderColor: 'var(--nb-ink)' }} />
               {WEBSITES.length} websites delivered in production
             </span>
           )}

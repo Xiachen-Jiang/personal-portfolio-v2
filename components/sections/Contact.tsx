@@ -4,8 +4,10 @@ import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, ArrowUpRight } from 'lucide-react'
 import { PROFILE } from '@/lib/constants'
 import GlassCard from '@/components/ui/GlassCard'
-import GradientText from '@/components/ui/GradientText'
+import SectionHeader from '@/components/ui/SectionHeader'
 import { fadeInUp, staggerContainer, viewportOnce } from '@/lib/animations'
+
+const ACCENT = 'var(--nb-red)'
 
 const contactLinks = [
   {
@@ -31,34 +33,20 @@ const contactLinks = [
 export default function Contact() {
   return (
     <section id="contact" className="relative py-24">
-      {/* Background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full blur-[140px]"
-          style={{ backgroundColor: 'var(--t-orb-1)' }}
-        />
-      </div>
-
       <div className="max-w-2xl mx-auto px-6 text-center">
-        {/* Section title */}
-        <motion.div
+        <SectionHeader eyebrow="Let's Connect" title="Get In Touch" accent={ACCENT} className="mb-6" />
+
+        <motion.p
           variants={fadeInUp}
           initial="hidden"
           whileInView="show"
           viewport={viewportOnce}
-          className="mb-6"
+          className="font-body leading-relaxed"
+          style={{ color: 'var(--nb-muted)' }}
         >
-          <p className="font-body text-sm uppercase tracking-widest mb-3" style={{ color: 'var(--t-text-3)' }}>
-            Let&apos;s Connect
-          </p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-            <GradientText>Get In Touch</GradientText>
-          </h2>
-          <p className="font-body leading-relaxed" style={{ color: 'var(--t-text-2)' }}>
-            I&apos;m always open to discussing new opportunities, interesting projects, or just having a great
-            conversation about tech. Feel free to reach out!
-          </p>
-        </motion.div>
+          I&apos;m always open to discussing new opportunities, interesting projects, or just having a great
+          conversation about tech. Feel free to reach out!
+        </motion.p>
 
         {/* Contact links */}
         <motion.div
@@ -79,26 +67,28 @@ export default function Contact() {
                 <GlassCard className="p-5">
                   <div className="flex items-center gap-4">
                     <div
-                      className="p-3 rounded-xl transition-colors duration-300"
+                      className="p-3 border-[3px]"
                       style={{
-                        backgroundColor: 'var(--t-eyebrow-bg)',
-                        color: 'var(--t-accent-1)',
+                        backgroundColor: ACCENT,
+                        borderColor: 'var(--nb-ink)',
+                        color: '#ffffff',
+                        borderRadius: '0.75rem',
                       }}
                     >
                       <item.icon size={22} />
                     </div>
                     <div className="text-left flex-1">
-                      <p className="font-display font-semibold" style={{ color: 'var(--t-text-1)' }}>
+                      <p className="font-display font-extrabold" style={{ color: 'var(--nb-ink)' }}>
                         {item.label}
                       </p>
-                      <p className="font-mono text-xs" style={{ color: 'var(--t-text-3)' }}>
+                      <p className="font-mono text-xs" style={{ color: 'var(--nb-muted)' }}>
                         {item.sub}
                       </p>
                     </div>
                     <ArrowUpRight
                       size={18}
                       className="transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                      style={{ color: 'var(--t-text-3)' }}
+                      style={{ color: 'var(--nb-ink)' }}
                     />
                   </div>
                 </GlassCard>
@@ -116,10 +106,16 @@ export default function Contact() {
           className="mt-10"
         >
           <span
-            className="inline-flex items-center gap-2 font-body text-sm border px-4 py-2 rounded-full"
-            style={{ color: 'var(--t-text-2)', borderColor: 'var(--t-card-border)' }}
+            className="inline-flex items-center gap-2 font-body text-sm font-bold border-[3px] px-4 py-2"
+            style={{
+              color: 'var(--nb-ink)',
+              borderColor: 'var(--nb-ink)',
+              backgroundColor: 'var(--nb-paper)',
+              borderRadius: '1.5rem',
+              boxShadow: '4px 4px 0 0 var(--nb-ink)',
+            }}
           >
-            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+            <span className="w-2.5 h-2.5 border-[2px]" style={{ backgroundColor: 'var(--nb-green)', borderColor: 'var(--nb-ink)' }} />
             Open to new opportunities
           </span>
         </motion.div>

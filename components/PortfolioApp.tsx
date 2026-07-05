@@ -1,6 +1,5 @@
 'use client'
 
-import ThemeVars from '@/components/ThemeVars'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import Hero from '@/components/sections/Hero'
@@ -15,10 +14,7 @@ import VisitorCounter from '@/components/ui/VisitorCounter'
 export default function PortfolioApp() {
   return (
     <>
-      {/* Injects --t-* CSS custom properties on :root at runtime */}
-      <ThemeVars />
-
-      <main className="min-h-screen" style={{ backgroundColor: 'var(--t-bg)' }}>
+      <main className="min-h-screen" style={{ backgroundColor: 'var(--nb-bg)' }}>
         <Navbar />
         <Hero />
         <About />

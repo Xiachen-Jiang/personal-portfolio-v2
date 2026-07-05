@@ -3,14 +3,18 @@ import { cn } from '@/lib/utils'
 interface GradientTextProps {
   children: React.ReactNode
   className?: string
+  accent?: string
 }
 
-export default function GradientText({ children, className }: GradientTextProps) {
+export default function GradientText({ children, className, accent }: GradientTextProps) {
   return (
     <span
-      className={cn('bg-gradient-to-r bg-clip-text text-transparent', className)}
+      className={cn('inline-block border-[3px] px-2 -rotate-1', className)}
       style={{
-        backgroundImage: 'linear-gradient(to right, var(--t-accent-1), var(--t-accent-2))',
+        backgroundColor: accent ?? 'var(--nb-yellow)',
+        color: 'var(--nb-ink)',
+        borderColor: 'var(--nb-ink)',
+        boxShadow: '4px 4px 0 0 var(--nb-ink)',
       }}
     >
       {children}

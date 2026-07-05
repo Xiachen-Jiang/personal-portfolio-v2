@@ -69,25 +69,20 @@ export default function VisitorCounter() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 8, scale: 0.95 }}
             transition={{ duration: 0.25, ease: 'easeOut' }}
-            className="relative max-w-[220px] px-4 py-3 rounded-2xl border backdrop-blur-md shadow-lg"
+            className="relative max-w-[220px] px-4 py-3 border-[3px]"
             style={{
-              backgroundColor: 'var(--t-card-bg)',
-              borderColor: 'var(--t-card-border)',
+              backgroundColor: 'var(--nb-paper)',
+              borderColor: 'var(--nb-ink)',
+              borderRadius: '1rem',
+              boxShadow: '5px 5px 0 0 var(--nb-ink)',
             }}
           >
-            <p className="font-display text-sm font-semibold mb-1" style={{ color: 'var(--t-text-1)' }}>
+            <p className="font-display text-sm font-extrabold mb-1" style={{ color: 'var(--nb-ink)' }}>
               Hello, viewer No.{count}.
             </p>
-            <p className="font-body text-xs leading-relaxed" style={{ color: 'var(--t-text-2)' }}>
+            <p className="font-body text-xs leading-relaxed" style={{ color: 'var(--nb-muted)' }}>
               Hope you have a good day!
             </p>
-            {/* <div
-              className="absolute -bottom-2 right-5 w-3 h-3 rotate-45 border-r border-b"
-              style={{
-                backgroundColor: 'var(--t-card-bg)',
-                borderColor: 'var(--t-card-border)',
-              }}
-            /> */}
           </motion.div>
         )}
       </AnimatePresence>
@@ -99,10 +94,12 @@ export default function VisitorCounter() {
         transition={{ duration: 0.2, ease: 'easeOut' }}
         onClick={() => setShowDialog(true)}
         aria-label="Open visitor greeting"
-        className="w-14 h-14 rounded-full border overflow-hidden shadow-lg cursor-pointer hover:scale-105 transition-transform flex items-center justify-center"
+        className="w-14 h-14 border-[3px] overflow-hidden cursor-pointer hover:scale-105 transition-transform flex items-center justify-center"
         style={{
-          backgroundColor: 'var(--t-card-bg)',
-          borderColor: 'var(--t-card-border)',
+          backgroundColor: 'var(--nb-paper)',
+          borderColor: 'var(--nb-ink)',
+          borderRadius: '1rem',
+          boxShadow: '4px 4px 0 0 var(--nb-ink)',
         }}
       >
         <ChibiAvatar size={56} />
