@@ -22,12 +22,12 @@ const contactLinks = [
     sub: 'https://github.com/Xiachen-Jiang',
     href: PROFILE.links.github,
   },
-  {
-    icon: Mail,
-    label: 'Email',
-    sub: PROFILE.email,
-    href: `mailto:${PROFILE.email}`,
-  },
+  // {
+  //   icon: Mail,
+  //   label: 'Email',
+  //   sub: PROFILE.email,
+  //   href: `mailto:${PROFILE.email}`,
+  // },
 ]
 
 export default function Contact() {
