@@ -36,10 +36,10 @@ export default function About() {
               Over the past two years, I&apos;ve delivered production applications across education, e-commerce, government and business services—working on everything from modern React frontends to ASP.NET Core APIs, SQL databases and cloud deployments.
             </p>
             <p className="font-body leading-relaxed mb-2" style={{ color: 'var(--nb-muted)' }}>
-              I enjoy solving problems, improving existing systems and learning new technologies quickly. Whether I&apos;m building a new feature, optimising performance or experimenting with AI-powered automation, my goal is always the same: create software that makes life easier for users.
+            I enjoy solving real-world problems, whether that means building a new feature, improving an existing system or finding a simpler way to get things done. I’m always keen to learn new technologies and put them into practice. Whatever I’m working on, my goal is always the same: to create software that makes life easier for users.
             </p>
             <p className="font-body leading-relaxed mb-2" style={{ color: 'var(--nb-muted)' }}>
-              Outside work, I enjoy exploring AI technologies, contributing to personal projects and continuously improving my development skills.
+            Outside of work, I enjoy exploring new ideas in technology and working on personal projects, but I also value having a balanced life. Music, gym and staying active help me recharge, stay curious and bring fresh energy to my work.
             </p>
           </motion.div>
 
