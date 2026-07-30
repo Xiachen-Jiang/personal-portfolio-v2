@@ -55,9 +55,7 @@ export default function CaseStudies() {
                   <h3 className="font-display text-xl font-extrabold mb-2" style={{ color: 'var(--nb-ink)' }}>
                     {study.title}
                   </h3>
-                  <p className="font-body text-sm leading-relaxed mb-5 flex-1" style={{ color: 'var(--nb-muted)' }}>
-                    {study.description}
-                  </p>
+
 
                   <div className="border-t-[3px] pt-4" style={{ borderColor: 'var(--nb-ink)' }}>
                     <Link
