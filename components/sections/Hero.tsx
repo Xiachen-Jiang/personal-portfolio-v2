@@ -109,7 +109,7 @@ export default function Hero() {
           className="flex flex-wrap gap-5 mb-12"
         >
           <a
-            href="#projects"
+            href="#case-studies"
             className="border-[3px] px-6 py-3 font-display font-bold text-base transition-all duration-150 hover:translate-x-[3px] hover:translate-y-[3px] active:translate-x-[6px] active:translate-y-[6px]"
             style={{
               backgroundColor: BLUE,
@@ -121,24 +121,7 @@ export default function Hero() {
             onMouseEnter={(e) => (e.currentTarget.style.boxShadow = `3px 3px 0 0 ${INK}`)}
             onMouseLeave={(e) => (e.currentTarget.style.boxShadow = `6px 6px 0 0 ${INK}`)}
           >
-            View Projects
-          </a>
-          <a
-            href={PROFILE.links.resume}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border-[3px] px-6 py-3 font-display font-bold text-base transition-all duration-150 hover:translate-x-[3px] hover:translate-y-[3px] active:translate-x-[6px] active:translate-y-[6px]"
-            style={{
-              backgroundColor: '#ffffff',
-              color: INK,
-              borderColor: INK,
-              borderRadius: '1.5rem',
-              boxShadow: `6px 6px 0 0 ${INK}`,
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.boxShadow = `3px 3px 0 0 ${INK}`)}
-            onMouseLeave={(e) => (e.currentTarget.style.boxShadow = `6px 6px 0 0 ${INK}`)}
-          >
-            Download Resume
+            View Case Studies
           </a>
         </motion.div>
 

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
-import { NAV_LINKS, PROFILE } from '@/lib/constants'
+import { NAV_LINKS } from '@/lib/constants'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -52,23 +52,6 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a
-            href={PROFILE.links.resume}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-1.5 text-sm font-display font-bold border-[3px] transition-all duration-150 hover:translate-x-[2px] hover:translate-y-[2px]"
-            style={{
-              borderColor: 'var(--nb-ink)',
-              backgroundColor: 'var(--nb-yellow)',
-              color: 'var(--nb-ink)',
-              borderRadius: '1.5rem',
-              boxShadow: '3px 3px 0 0 var(--nb-ink)',
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.boxShadow = 'none')}
-            onMouseLeave={(e) => (e.currentTarget.style.boxShadow = '3px 3px 0 0 var(--nb-ink)')}
-          >
-            Resume
-          </a>
         </nav>
 
         {/* Mobile right side */}
@@ -115,16 +98,6 @@ export default function Navbar() {
                   {link.label}
                 </a>
               ))}
-              <a
-                href={PROFILE.links.resume}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-body text-sm font-bold py-1"
-                style={{ color: 'var(--nb-blue)' }}
-                onClick={() => setMenuOpen(false)}
-              >
-                Resume ↗
-              </a>
             </nav>
           </motion.div>
         )}

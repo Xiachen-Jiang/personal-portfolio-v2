@@ -98,7 +98,7 @@ export default function VisitorCounter() {
         style={{
           backgroundColor: 'var(--nb-paper)',
           borderColor: 'var(--nb-ink)',
-          borderRadius: '1rem',
+          borderRadius: '2rem',
           boxShadow: '4px 4px 0 0 var(--nb-ink)',
         }}
       >

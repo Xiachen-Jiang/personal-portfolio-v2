@@ -9,7 +9,7 @@ export default function Footer() {
     >
       <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="font-body text-sm font-semibold" style={{ color: 'var(--nb-ink)' }}>
-          © {new Date().getFullYear()} James Jiang. Built with Next.js & Tailwind CSS.
+          © {new Date().getFullYear()} James Jiang.
         </p>
         <div className="flex items-center gap-3">
           <a
@@ -22,7 +22,7 @@ export default function Footer() {
               color: 'var(--nb-ink)',
               borderColor: 'var(--nb-ink)',
               backgroundColor: 'var(--nb-paper)',
-              borderRadius: '0.75rem',
+              borderRadius: '1.2rem',
               boxShadow: '3px 3px 0 0 var(--nb-ink)',
             }}
             onMouseEnter={(e) => (e.currentTarget.style.boxShadow = 'none')}
@@ -40,7 +40,7 @@ export default function Footer() {
               color: 'var(--nb-ink)',
               borderColor: 'var(--nb-ink)',
               backgroundColor: 'var(--nb-paper)',
-              borderRadius: '0.75rem',
+              borderRadius: '1.2rem',
               boxShadow: '3px 3px 0 0 var(--nb-ink)',
             }}
             onMouseEnter={(e) => (e.currentTarget.style.boxShadow = 'none')}

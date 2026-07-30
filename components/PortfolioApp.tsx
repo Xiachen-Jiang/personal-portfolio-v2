@@ -6,8 +6,7 @@ import Hero from '@/components/sections/Hero'
 import About from '@/components/sections/About'
 import Skills from '@/components/sections/Skills'
 import Experience from '@/components/sections/Experience'
-import ClientWork from '@/components/sections/ClientWork'
-import Projects from '@/components/sections/Projects'
+import CaseStudies from '@/components/sections/CaseStudies'
 import Contact from '@/components/sections/Contact'
 import VisitorCounter from '@/components/ui/VisitorCounter'
 
@@ -20,8 +19,7 @@ export default function PortfolioApp() {
         <About />
         <Skills />
         {/* <Experience /> */}
-        <ClientWork />
-        <Projects />
+        <CaseStudies />
         <Contact />
         <Footer />
       </main>
