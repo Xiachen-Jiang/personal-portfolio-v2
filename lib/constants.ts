@@ -2,12 +2,12 @@ export const PROFILE = {
   name: 'James Jiang',
   title: 'Full Stack Web Developer',
   bio: 'Full Stack Developer with 2+ years of experience delivering end-to-end web applications across both frontend and backend environments. Skilled in building responsive UIs and robust server-side logic to support scalable, user-focused solutions.',
-  email: 'jiangxiachen01@outlook.com',
   skills: {
     frontend: ['React', 'Angular', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'Bootstrap', 'HTML5', 'CSS3'],
     backend: ['C#', 'ASP.NET Core', 'Node.js', 'RESTful APIs', 'PHP'],
     databases: ['SQL Server', 'PostgreSQL', 'MySQL', 'Firebase'],
     tools: ['Git', 'Azure DevOps', 'Docker', 'CI/CD', 'Jest', 'NUnit'],
+    ai: ['LangChain', 'OpenAI', 'LangGraph', 'LLMs', 'Tool Calling', 'Agent Orchestration', 'Prompt Engineering'],
   },
   links: {
     github: 'https://github.com/Xiachen-Jiang',
@@ -15,39 +15,6 @@ export const PROFILE = {
     website: 'https://www.james-jiang.com',
   },
 } as const
-
-export const EXPERIENCE = [
-  {
-    id: 1,
-    role: 'Web/Software Developer',
-    company: 'JABA Web Design',
-    location: 'Adelaide, Australia',
-    period: 'Sep 2024 – Present',
-    bullets: [
-      'Delivered full-stack software solutions across 30+ commercial client projects, building scalable web applications using React, Angular, TypeScript, ASP.NET Core and SQL Server.',
-      'Designed and implemented RESTful APIs, backend services and business workflows supporting frontend applications, third-party integrations and database-driven systems.',
-      'Developed customer-facing features, CMS functionality, reporting modules and internal business tools that improved operational efficiency and user experience.',
-      'Optimised SQL Server performance through query tuning, indexing and database design improvements, enhancing application responsiveness and production stability.',
-      'Automated build, deployment and release processes using Azure DevOps, Git and CI/CD pipelines, improving deployment reliability and reducing manual effort.',
-      'Investigated and resolved complex issues across frontend, backend, databases and production environments using root-cause analysis and long-term solutions.',
-      'Collaborated with clients, designers and cross-functional teams to analyse requirements, define technical solutions and deliver production-ready software in Agile environments.',
-      'Explored AI-assisted development workflows, prompt engineering and agent-based automation to improve engineering productivity and streamline repetitive tasks.',
-    ],
-  },
-  {
-    id: 2,
-    role: 'Software Developer',
-    company: 'James Anthony Consulting',
-    location: 'Adelaide, Australia',
-    period: 'Apr 2024 – Jun 2024',
-    bullets: [
-      'Built front-end components with React, TypeScript, and Bootstrap, enhancing UI consistency and responsiveness for a web-based device management application.',
-      'Developed backend functionality using C# ASP.NET Core, integrating RESTful APIs and authentication.',
-      'Collaborated in Agile sprints, refining features and resolving bugs promptly to meet project milestones.',
-      'Ensured software quality and performance through code reviews, maintaining high development standards across admin portal, device management, and organisation modules.',
-    ],
-  },
-]
 
 export type ContentBlock =
   | { type: 'heading'; text: string }

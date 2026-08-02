@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Monitor, Server, Database, Wrench } from 'lucide-react'
+import { Monitor, Server, Database, Wrench, Sparkles } from 'lucide-react'
 import { PROFILE } from '@/lib/constants'
 import GlassCard from '@/components/ui/GlassCard'
 import Badge from '@/components/ui/Badge'
@@ -15,6 +15,7 @@ const categories = [
   { icon: Server, label: 'Backend', skills: [...PROFILE.skills.backend] },
   { icon: Database, label: 'Databases', skills: [...PROFILE.skills.databases] },
   { icon: Wrench, label: 'Tools & DevOps', skills: [...PROFILE.skills.tools] },
+  { icon: Sparkles, label: 'AI', skills: [...PROFILE.skills.ai] },
 ]
 
 const allSkills = [
@@ -22,6 +23,7 @@ const allSkills = [
   ...PROFILE.skills.backend,
   ...PROFILE.skills.databases,
   ...PROFILE.skills.tools,
+  ...PROFILE.skills.ai,
 ]
 
 export default function Skills() {
@@ -36,7 +38,7 @@ export default function Skills() {
           initial="hidden"
           whileInView="show"
           viewport={viewportOnce}
-          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-16"
+          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-16"
         >
           {categories.map((cat) => (
             <motion.div key={cat.label} variants={fadeInUp} className="h-full">
@@ -66,39 +68,6 @@ export default function Skills() {
             </motion.div>
           ))}
         </motion.div>
-
-        {/* Marquee */}
-        {/* <motion.div
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="show"
-          viewport={viewportOnce}
-          className="overflow-hidden"
-        >
-          <p className="font-body text-xs uppercase tracking-widest text-center mb-4 font-bold" style={{ color: 'var(--nb-muted)' }}>
-            All Technologies
-          </p>
-          <div className="relative border-y-[3px] py-4" style={{ borderColor: 'var(--nb-ink)' }}>
-            <div className="flex gap-3 overflow-hidden">
-              <div className="flex gap-3 shrink-0 animate-[marquee_35s_linear_infinite]">
-                {[...allSkills, ...allSkills].map((skill, i) => (
-                  <span
-                    key={i}
-                    className="font-mono text-xs font-semibold px-4 py-1.5 border-[2px] whitespace-nowrap"
-                    style={{
-                      backgroundColor: 'var(--nb-paper)',
-                      borderColor: 'var(--nb-ink)',
-                      color: 'var(--nb-ink)',
-                      borderRadius: '0.5rem',
-                    }}
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </motion.div> */}
       </div>
     </section>
   )
