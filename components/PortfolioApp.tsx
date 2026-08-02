@@ -5,7 +5,6 @@ import Footer from '@/components/layout/Footer'
 import Hero from '@/components/sections/Hero'
 import About from '@/components/sections/About'
 import Skills from '@/components/sections/Skills'
-import Experience from '@/components/sections/Experience'
 import CaseStudies from '@/components/sections/CaseStudies'
 import Contact from '@/components/sections/Contact'
 import VisitorCounter from '@/components/ui/VisitorCounter'
@@ -18,7 +17,6 @@ export default function PortfolioApp() {
         <Hero />
         <About />
         <Skills />
-        {/* <Experience /> */}
         <CaseStudies />
         <Contact />
         <Footer />
