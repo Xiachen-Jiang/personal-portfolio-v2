@@ -90,15 +90,15 @@ export default function Hero() {
         >
           Building software that people actually enjoy using.
           <br />
-          Full Stack Developer specialising in{' '}
+          I&apos;m a Full Stack Developer who enjoys turning complex business requirements into {' '}
           <span className="font-bold" style={{ backgroundColor: YELLOW, padding: '0 4px' }}>
-            React
+            clean
           </span>
-          ,{' '}
+          , {' '}
           <span className="font-bold" style={{ backgroundColor: YELLOW, padding: '0 4px' }}>
-            ASP.NET Core
+            scalable
           </span>
-          and modern cloud technologies.
+          software.
         </motion.p>
 
         {/* CTA buttons */}

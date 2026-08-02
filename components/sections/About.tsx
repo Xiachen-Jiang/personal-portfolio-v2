@@ -30,10 +30,10 @@ export default function About() {
               Building great software.
             </h3>
             <p className="font-body leading-relaxed mb-2" style={{ color: 'var(--nb-muted)' }}>
-              I&apos;m a Full Stack Developer who enjoys turning complex business requirements into clean, scalable software.
+              I&apos;m a Full Stack Developer specialising in modern frontend frameworks, backend services and modern cloud technologies.
             </p>
             <p className="font-body leading-relaxed mb-2" style={{ color: 'var(--nb-muted)' }}>
-              Over the past two years, I&apos;ve delivered production applications across education, e-commerce, government and business services—working on everything from modern React frontends to ASP.NET Core APIs, SQL databases and cloud deployments.
+              Over the past two years, I&apos;ve delivered production applications across education, e-commerce and business services.
             </p>
             <p className="font-body leading-relaxed mb-2" style={{ color: 'var(--nb-muted)' }}>
             I enjoy solving real-world problems, whether that means building a new feature, improving an existing system or finding a simpler way to get things done. I’m always keen to learn new technologies and put them into practice. Whatever I’m working on, my goal is always the same: to create software that makes life easier for users.
