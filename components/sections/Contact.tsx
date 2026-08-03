@@ -105,7 +105,7 @@ export default function Contact() {
           viewport={viewportOnce}
           className="mt-10"
         >
-          <span
+          {/* <span
             className="inline-flex items-center gap-2 font-body text-sm font-bold border-[3px] px-4 py-2"
             style={{
               color: 'var(--nb-ink)',
@@ -117,7 +117,7 @@ export default function Contact() {
           >
             <span className="w-2.5 h-2.5 border-[2px]" style={{ backgroundColor: 'var(--nb-green)', borderColor: 'var(--nb-ink)' }} />
             Open to new opportunities
-          </span>
+          </span> */}
         </motion.div>
       </div>
     </section>

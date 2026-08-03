@@ -26,7 +26,7 @@ export default function Hero() {
           boxShadow: `5px 5px 0 0 ${INK}`,
         }}
       >
-        Open to work ✦
+        Seeking New Opportunities ✦
       </div>
 
       {/* Decorative star — bottom right */}
