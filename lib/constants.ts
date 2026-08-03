@@ -93,11 +93,6 @@ export const CASE_STUDIES: CaseStudy[] = [
           'Personalised itinerary building',
         ],
       },
-      // { type: 'heading', text: 'Outcome' },
-      // {
-      //   type: 'paragraph',
-      //   text: 'Delivered a working planning experience for travellers. Placeholder — add outcomes when ready.',
-      // },
     ],
   },
   {
@@ -148,7 +143,6 @@ export function getAllCaseStudySlugs(): string[] {
 export const NAV_LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
-  // { label: 'Experience', href: '#experience' },
   { label: 'Case Studies', href: '#case-studies' },
   { label: 'Contact', href: '#contact' },
 ]
