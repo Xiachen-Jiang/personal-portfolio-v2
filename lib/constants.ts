@@ -32,8 +32,8 @@ export type CaseStudy = {
 
 export const CASE_STUDIES: CaseStudy[] = [
   {
-    slug:'tank-James',
-    title:'Tank James - Personal Project',
+    slug:'fuel-up-James',
+    title:'Fuel Up, James - Personal Project',
     thumbnail:'/project/tank-James/tank-James.png',
     demoVideo: '/project/tank-James/fuel-up-James.MP4',
     content: [
