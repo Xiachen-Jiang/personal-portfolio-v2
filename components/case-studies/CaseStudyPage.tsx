@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import type { CaseStudy, ContentBlock } from '@/lib/constants'
+import DemoThumbnail from '@/components/case-studies/DemoThumbnail'
 
 const ACCENT = 'var(--nb-yellow)'
 
@@ -119,24 +120,32 @@ export default function CaseStudyPage({ study }: { study: CaseStudy }) {
           {study.title}
         </h1>
 
-        <div
-          className="relative w-full overflow-hidden border-[3px] mb-12"
-          style={{
-            borderColor: 'var(--nb-ink)',
-            boxShadow: '8px 8px 0 0 var(--nb-ink)',
-            backgroundColor: 'var(--nb-paper)',
-          }}
-        >
-          <Image
-            src={study.thumbnail}
-            alt={study.title}
-            width={1200}
-            height={800}
-            className="w-full h-auto block"
-            priority
-            unoptimized
+        {study.demoVideo ? (
+          <DemoThumbnail
+            thumbnail={study.thumbnail}
+            title={study.title}
+            videoSrc={study.demoVideo}
           />
-        </div>
+        ) : (
+          <div
+            className="relative w-full overflow-hidden border-[3px] mb-12"
+            style={{
+              borderColor: 'var(--nb-ink)',
+              boxShadow: '8px 8px 0 0 var(--nb-ink)',
+              backgroundColor: 'var(--nb-paper)',
+            }}
+          >
+            <Image
+              src={study.thumbnail}
+              alt={study.title}
+              width={1200}
+              height={800}
+              className="w-full h-auto block"
+              priority
+              unoptimized
+            />
+          </div>
+        )}
 
         <ContentBlocks blocks={study.content} />
       </article>
